@@ -1,0 +1,423 @@
+:root {
+    --bg-dark: #0b0e14;
+    --card-bg: #131922;
+    --card-border: #1e2633;
+    --lime-accent: #ccff00;
+    --lime-hover: #b3e600;
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Rajdhani', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #e2e8f0;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .brand-text {
+    font-family: var(--font-heading);
+}
+
+.text-lime {
+    color: var(--lime-accent) !important;
+}
+
+.bg-lime {
+    background-color: var(--lime-accent) !important;
+}
+
+.fs-7 {
+    font-size: 0.75rem;
+}
+
+
+.top-full-glow-line {
+    height: 3px;
+    width: 65%;
+    margin: 0 auto;
+    background: linear-gradient(90deg, transparent 0%, #ccff00 50%, transparent 100%);
+    box-shadow: 0 0 15px #ccff00, 0 0 5px #ccff00;
+    border-radius: 50%;
+}
+
+.glowing-line-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.glowing-line-title .line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--lime-accent));
+    box-shadow: 0 0 8px var(--lime-accent);
+}
+
+.glowing-line-title .line:last-child {
+    background: linear-gradient(90deg, var(--lime-accent), transparent);
+}
+
+.glowing-line-title .title-text {
+    color: var(--lime-accent);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+/* Custom Navbar */
+.custom-navbar {
+    background-color: rgba(11, 14, 20, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--card-border);
+}
+
+.brand-icon {
+    background-color: var(--lime-accent);
+    color: #000;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.brand-text {
+    color: var(--lime-accent);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.custom-navbar .nav-link {
+    color: #a0aec0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    color: var(--lime-accent);
+}
+
+/* Buttons */
+.btn-lime-solid {
+    background-color: var(--lime-accent);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-lime-solid:hover {
+    background-color: var(--lime-hover);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.btn-lime-outline {
+    background-color: transparent;
+    color: var(--lime-accent);
+    border: 1px solid var(--lime-accent);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-lime-outline:hover {
+    background-color: var(--lime-accent);
+    color: #000;
+}
+
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #fff;
+}
+
+.hero-desc {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+.hero-image-box {
+    border: 2px solid var(--lime-accent);
+    border-radius: 20px;
+    background: radial-gradient(circle, rgba(204,255,0,0.1) 0%, rgba(0,0,0,0) 70%);
+}
+
+.badge-card {
+    background-color: rgba(19, 25, 34, 0.9);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(5px);
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Games Section */
+.game-card {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-arrow {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--card-border);
+    color: #fff;
+    background-color: var(--card-bg);
+}
+
+/* What We Do */
+.service-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.service-card.active-lime {
+    background-color: var(--lime-accent);
+    border-color: var(--lime-accent);
+}
+
+.card-img-fill {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background-color: #1a222f;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--lime-accent);
+    font-size: 1.5rem;
+}
+
+
+.marquee-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 90px; 
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 12px;
+}
+
+.marquee-group {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+/* حركة الصف الأول إلى اليسار والصف الثاني إلى اليمين */
+.marquee-left {
+    animation: scrollLeft 28s linear infinite;
+}
+
+.marquee-right {
+    animation: scrollRight 28s linear infinite;
+}
+
+@keyframes scrollLeft {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+}
+
+/* أبعاد المربعات الصغيرة للشعارات */
+.esports-badge {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    width: 95px;
+    height: 75px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.esports-badge:hover {
+    transform: scale(1.06);
+    border-color: var(--lime-accent);
+}
+
+.esports-badge img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Team Cards */
+.team-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    min-height: 380px;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+    object-fit: cover;
+    height: 380px;
+}
+
+.team-card:hover .grayscale {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+.team-info {
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 60%, transparent 100%);
+    z-index: 2;
+}
+
+.vertical-tag {
+    position: absolute;
+    right: 12px;
+    bottom: 20px;
+    writing-mode: vertical-rl;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 3px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Contact */
+.info-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+}
+
+.info-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--lime-accent);
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.community-card {
+    background-color: var(--lime-accent);
+}
+
+.social-btn {
+    width: 38px;
+    height: 38px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.contact-form-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+}
+
+.custom-input {
+    background-color: #1a222f;
+    border: 1px solid var(--card-border);
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+}
+
+.custom-input::placeholder {
+    color: #64748b;
+}
+
+.custom-input:focus {
+    background-color: #1a222f;
+    border-color: var(--lime-accent);
+    color: #fff;
+    box-shadow: none;
+}
+
+/* Footer */
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    line-height: 2;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover, .hover-lime:hover {
+    color: var(--lime-accent) !important;
+}
+
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
